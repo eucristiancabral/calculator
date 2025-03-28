@@ -1,4 +1,4 @@
-## CALCULATOR PROJECT! 🖩⌨
+## CALCULATOR PROJECT! 
 
 A simple calculator project built using HTML, CSS and JavaScript.
 
