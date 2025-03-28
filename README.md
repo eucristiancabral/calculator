@@ -6,8 +6,7 @@ The calculator has the main conventional functions, such as addition, subtractio
 
 It is a simple project that can help you start learning HTML, CSS and JavaScript.
 
-_
-
+#
 
 ## PROJETO CALCULADORA!
 
