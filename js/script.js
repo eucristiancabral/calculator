@@ -23,7 +23,7 @@ class Calculator {
     //processar todas as operações da calculadora
     processOperation(operation){
         //verifique se current está vazio
-        if(this.currentOperationText.innerText === "") {
+        if(this.currentOperationText.innerText === "" && operation !== "C") {
             //mudança de operação
             if(this.previousOperationText.innerText !== "") {
                 this.changeOperation(operation);
@@ -52,6 +52,18 @@ class Calculator {
             case "*":
                 operationValue = previous * current
                 this.updateScreen(operationValue, operation, current, previous);
+              break;
+            case "DEL":
+                this.processDelOperator();
+              break;
+            case "CE":
+                this.processClearCurrentOperation();
+              break;
+            case "C":
+                this.processClearOperation();
+              break;
+            case "=":
+                this.processEqualOperator();
               break;
             default:
               return;
@@ -89,8 +101,32 @@ class Calculator {
             return
         }
 
-        this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0, -1) + operation 
+        this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0, -1) + operation;
 
+    }
+
+    //Deletar o ultimo digito
+    processDelOperator(){
+        this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0, -1);
+    }
+
+    //Deleta a operação atual
+    processClearCurrentOperation(){
+        this.currentOperationText.innerText = "";
+    }
+
+    //Detela toda operação
+    processClearOperation(){
+        this.currentOperationText.innerText = "";
+        this;previousOperationText.innerText = "";
+    }
+
+    //Resultado das operações
+    processEqualOperator(){
+
+        const operation = previousOperationText.innerText.split(" ")[1]
+        
+        this.processOperation(operation);
     }
 }
 
