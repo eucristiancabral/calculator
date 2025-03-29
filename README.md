@@ -1,4 +1,4 @@
-## CALCULATOR PROJECT! 
+## CALCULATOR PROJECT
 
 A simple calculator project built using HTML, CSS and JavaScript.
 
@@ -8,7 +8,7 @@ It is a simple project that can help you start learning HTML, CSS and JavaScript
 
 #
 
-## PROJETO CALCULADORA!
+## PROJETO CALCULADORA
 
 Um projeto de uma calculadora simples construida utilizando HTML, CSS e JavaScript. 
 
